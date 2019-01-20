@@ -1,17 +1,17 @@
 package es.iessaladillo.pedrojoya.pr08.ui.lorem;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.ViewCompat;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import es.iessaladillo.pedrojoya.pr08.R;
 
 public class LoremFragment extends Fragment {
@@ -33,7 +33,27 @@ public class LoremFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(LoremViewModel.class);
+        setupToolbar(requireView());
         // TODO: Use the ViewModel
+
+
+    }
+    private void setupToolbar(View view) {
+        Toolbar toolbar = ViewCompat.requireViewById(view, R.id.toolbar);
+        toolbar.setTitle(R.string.app_name);
+        toolbar.inflateMenu(R.menu.lorem_fragment_menu);
+        toolbar.setOnMenuItemClickListener((MenuItem item) -> {
+            switch (item.getItemId()) {
+                case R.id.mnuSettings:
+                    navigateToSettings();
+                default:
+                    return false;
+            }
+        });
+    }
+
+    private void navigateToSettings() {
+
     }
 
 }
