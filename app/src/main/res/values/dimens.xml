@@ -1,3 +1,4 @@
 <resources>
     <!-- TODO -->
+    <dimen name="lst_padding">8dp</dimen>
 </resources>

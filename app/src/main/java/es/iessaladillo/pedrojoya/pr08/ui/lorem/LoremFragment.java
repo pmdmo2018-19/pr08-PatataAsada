@@ -34,10 +34,9 @@ public class LoremFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(LoremViewModel.class);
         setupToolbar(requireView());
-        // TODO: Use the ViewModel
-
 
     }
+
     private void setupToolbar(View view) {
         Toolbar toolbar = ViewCompat.requireViewById(view, R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
@@ -50,6 +49,8 @@ public class LoremFragment extends Fragment {
                     return false;
             }
         });
+
+
     }
 
     private void navigateToSettings() {

@@ -16,4 +16,6 @@ Ahorarr ese que llega a wan diodenoo ese pedazo de te va a hasé pupitaa te voy 
     <string name="app_name"><![CDATA[Toolbar&Preferences]]></string>
     <string name="main_mnuSettings">configuracion</string>
     <string name="main_mnuNext">Lorem Fragmen</string>
+    <string name="prefOption_key" />
+    <string name="prefOption_defaultValue" />
 </resources>
