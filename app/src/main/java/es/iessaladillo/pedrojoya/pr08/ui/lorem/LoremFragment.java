@@ -55,8 +55,8 @@ public class LoremFragment extends Fragment {
     }
 
     private void navigateToDetails() {
-        DescriptionFragment descriptionFragment = new DescriptionFragment();
-        FragmentManager fragmentManager = getFragmentManager();
+        DescriptionFragment descriptionFragment = DescriptionFragment.newInstance();
+        FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.description_fragment,descriptionFragment, TAG_DESC_FRAGMENT);
         transaction.commit();
@@ -81,7 +81,7 @@ public class LoremFragment extends Fragment {
 
     private void navigateToSettings() {
         SettingFragment settingFragment = new SettingFragment();
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.coordinatorLayout,settingFragment, TAG_SETTINGS_FRAGMENT);
         transaction.commit();
