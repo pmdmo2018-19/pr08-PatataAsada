@@ -1,4 +1,6 @@
 <resources>
     <!-- TODO -->
     <dimen name="lst_padding">8dp</dimen>
+    <dimen name="fab_margin">8dp</dimen>
+    <dimen name="paddingTextLorem">8dp</dimen>
 </resources>
